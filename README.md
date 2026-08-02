@@ -3,7 +3,7 @@
 一个极简、高性能的 [oh-my-posh](https://ohmyposh.dev/) PowerShell 主题。
 
 <p align="center">
-  <img src="./screen-shot.png" width="60%"/>
+  <img src="./screen-shot.png" width="80%"/>
 </p>
 
 <table align="center">
