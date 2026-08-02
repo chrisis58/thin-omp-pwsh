@@ -38,6 +38,17 @@ Write-Host "  -> $themeFile" -ForegroundColor Green
 $profileUrl = "$Repo/$Branch/profile.ps1"
 $profileContent = Invoke-WebRequest -Uri $profileUrl -UseBasicParsing | Select-Object -ExpandProperty Content
 $userProfile = $PROFILE.CurrentUserAllHosts
+$hostProfile = $PROFILE
+
+# Check for oh-my-posh config in the host-specific profile too
+$hostExisting = if (Test-Path $hostProfile) { Get-Content $hostProfile -Raw } else { "" }
+$hostHasOmp = $hostExisting -match 'oh-my-posh\s+init\s+(pwsh|powershell)|Enable-PoshStreaming|Enable-KeyHandlers|\.omp\.json'
+if ($hostHasOmp) {
+    Write-Host "NOTE: oh-my-posh config also found in host profile:" -ForegroundColor Yellow
+    Write-Host "  $hostProfile" -ForegroundColor Yellow
+    Write-Host "  Install only writes to CurrentUserAllHosts; consider cleaning the host profile manually." -ForegroundColor Yellow
+    Write-Host ""
+}
 
 $existing = if (Test-Path $userProfile) { Get-Content $userProfile -Raw } else { "" }
 
