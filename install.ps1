@@ -1,4 +1,4 @@
-# Thin Posh Theme — one-line installer
+# Thin Posh Theme -- one-line installer
 # Usage: iwr https://raw.githubusercontent.com/chrisis58/thin-omp-pwsh/main/install.ps1 | iex
 
 param(
