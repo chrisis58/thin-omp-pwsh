@@ -2,14 +2,15 @@
 
 一个极简、高性能的 [oh-my-posh](https://ohmyposh.dev/) PowerShell 主题。
 
+<p align="center">
+  <img src="./screen-shot.png" width="60%"/>
+</p>
 
-
-![](./screen-shot.png)
-
-| 指标 | 优化前 | 优化后 | 加速比 |
-|------|--------|--------|--------|
-| Shell 启动初始化 | 182 ms | 84 ms | **2.2×** |
-| 单次 prompt 渲染 | 64.4 ms | 0.08 ms | **835×** |
+<table align="center">
+<tr><th>指标</th><th>优化前</th><th>优化后</th><th>加速比</th></tr>
+<tr><td>Shell 启动初始化</td><td>182 ms</td><td>84 ms</td><td><b>2.2x</b></td></tr>
+<tr><td>单次 prompt 渲染</td><td>64.4 ms</td><td>0.08 ms</td><td><b>835x</b></td></tr>
+</table>
 
 ## 功能特性
 
